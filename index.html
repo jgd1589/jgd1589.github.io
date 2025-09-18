@@ -10,6 +10,10 @@
     />
     <meta name="generator" content="Astro v5.13.2" />
     <title>The Knot Encyclopedia</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link
       rel="canonical"
       href="https://getbootstrap.com/docs/5.3/examples/sidebars/"
@@ -19,30 +23,34 @@
         <!-- jQuery (make sure it’s loaded before this script) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $('#home').on('click', function(e){
+      $('#home').on('click', function(e){
         e.preventDefault(); // stop the default navigation
         $('#contentArea').load('modals/home.html'); // loads the file into the div
-       });
+          });
+      $('#knot5').on('click', function(e){
+        e.preventDefault(); // stop the default navigation
+        $('#contentArea').load('modals/knot5.html'); // loads the file into the div
+          });      
       $('#knot1').on('click', function(e){
         e.preventDefault(); // stop the default navigation
         $('#contentArea').load('modals/knot1.html'); // loads the file into the div
-       });
-        $('#knot2').on('click', function(e){
+          });
+      $('#knot2').on('click', function(e){
         e.preventDefault(); // stop the default navigation
         $('#contentArea').load('modals/knot2.html'); // loads the file into the div
-       });
-        $('#knot3').on('click', function(e){
+          });
+      $('#knot3').on('click', function(e){
         e.preventDefault(); // stop the default navigation
         $('#contentArea').load('modals/knot3.html'); // loads the file into the div
-       });
-        $('#knot4').on('click', function(e){
+          });
+      $('#knot4').on('click', function(e){
         e.preventDefault(); // stop the default navigation
         $('#contentArea').load('modals/knot4.html'); // loads the file into the div
-       });
-        $('#knot5').on('click', function(e){
+          });
+      $('#knot5').on('click', function(e){
         e.preventDefault(); // stop the default navigation
         $('#contentArea').load('modals/knot5.html'); // loads the file into the div
-       });
+          });
     </script>
     <meta name="theme-color" content="#712cf9" />
     <link href="sidebars.css" rel="stylesheet" />
@@ -272,8 +280,28 @@
           class="d-flex align-items-center flex-shrink-0 p-3 link-body-emphasis text-decoration-none border-bottom"
         >
           <span class="fs-5 fw-semibold">The Knot Encyclopedia<br><center><em>version 0.1.0</em></center></span>
+        
         </a>
         <div class="list-group list-group-flush border-bottom scrollarea">
+
+          <a
+            href="modals/knot5_1.html" target="contentFrame" id="knot5_1" 
+            class="list-group-item list-group-item-action py-3 lh-sm btn"
+            aria-current="true"
+          >
+            <div
+              class="d-flex w-100 align-items-center justify-content-between"
+            >
+              <strong class="mb-1">5<sub>1</sub></strong>
+              <small>09/18/25</small>
+            </div>
+            <div class="col-10 mb-1 small">
+              
+
+            </div>
+          </a>
+
+
           <a
             href="modals/knot1.html" target="contentFrame" id="knot1" 
             class="list-group-item list-group-item-action py-3 lh-sm btn"
@@ -291,7 +319,7 @@
             </div>
           </a>
 
-                    <a
+          <a
             href="modals/knot2.html" target="contentFrame" id="knot2" 
             class="list-group-item list-group-item-action py-3 lh-sm btn"
             aria-current="true"
