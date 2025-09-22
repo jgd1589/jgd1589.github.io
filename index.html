@@ -27,6 +27,10 @@
         e.preventDefault(); // stop the default navigation
         $('#contentArea').load('modals/home.html'); // loads the file into the div
           });
+      $('#trefoil').on('click', function(e){
+        e.preventDefault(); // stop the default navigation
+        $('#contentArea').load('modals/trefoil.html'); // loads the file into the div
+          }); 
       $('#knot5').on('click', function(e){
         e.preventDefault(); // stop the default navigation
         $('#contentArea').load('modals/knot5.html'); // loads the file into the div
@@ -283,6 +287,23 @@
         
         </a>
         <div class="list-group list-group-flush border-bottom scrollarea">
+
+          <a
+            href="modals/trefoil.html" target="contentFrame" id="trefoil" 
+            class="list-group-item list-group-item-action py-3 lh-sm btn"
+            aria-current="true"
+          >
+            <div
+              class="d-flex w-100 align-items-center justify-content-between"
+            >
+              <strong class="mb-1">Trefoil</strong>
+              <small>09/22/25</small>
+            </div>
+            <div class="col-10 mb-1 small">
+              
+
+            </div>
+          </a>
 
           <a
             href="modals/knot5_1.html" target="contentFrame" id="knot5_1" 
