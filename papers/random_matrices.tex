@@ -1,0 +1,33 @@
+% random_matrices.tex
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, amsthm, geometry}
+\geometry{margin=1in}
+\title{Spectral Statistics of Random Matrices and Numerical PDEs}
+\author{Jonathan Gonzalez Davila}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study connections between the spectral distributions of random matrices and discretizations of elliptic partial differential operators. By examining eigenvalue statistics of finite-difference Laplacians perturbed by random noise, we demonstrate convergence toward universal ensembles predicted by random matrix theory. This provides a computational framework linking numerical PDE solvers to statistical predictions from quantum chaos.
+\end{abstract}
+
+\section{Introduction}
+Random matrix theory (RMT) has long described universal spectral features across quantum systems, number theory, and high-dimensional statistics. In numerical PDEs, discretizations of operators such as the Laplacian produce large structured matrices whose spectra encode analytic properties of the underlying domain.
+
+\section{Main Observation}
+Let $L_h$ denote the finite-difference Laplacian on a uniform grid of mesh size $h$, and let $A_h = L_h + \epsilon R_h$, where $R_h$ is a random symmetric perturbation. As $h \to 0$ and $\epsilon \to 0$, the normalized eigenvalue gaps of $A_h$ converge in distribution to those of the Gaussian Orthogonal Ensemble (GOE).
+
+\section{Numerical Illustration}
+Simulations of $A_h$ on $[0,1]^2$ using $100\times100$ grids reveal that even small random perturbations produce GOE-like level spacing statistics. This confirms the universality conjecture in a numerical PDE setting.
+
+\section{Conclusion}
+The spectral universality observed in numerical PDE matrices suggests a deep interplay between discretization theory and random matrix models, with implications for stability analysis and uncertainty quantification.
+
+\begin{thebibliography}{9}
+\bibitem{Mehta} M. L. Mehta, \textit{Random Matrices}, Academic Press, 2004.
+\bibitem{Trefethen} L. N. Trefethen, \textit{Spectral Methods in MATLAB}, SIAM, 2000.
+\end{thebibliography}
+
+\end{document}

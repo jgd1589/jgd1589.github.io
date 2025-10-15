@@ -7,10 +7,10 @@
   <title>Jonathan Gonzalez — Links</title>
   <meta name="description"
     content="Quick personal link page for Jonathan Gonzalez: Github, personal page, The Knot Encyclopedia." />
+  <link rel="icon" href="./favicon.png" type="image/png">
   <style>
     :root {
       --bg: #0f1724;
-      /* dark navy */
       --card: #0b1220;
       --accent: #7dd3fc;
       --muted: #9aa7b5;
@@ -103,11 +103,6 @@
       border: 1px solid rgba(255, 255, 255, 0.02);
     }
 
-    a.link:focus {
-      outline: 2px solid rgba(125, 211, 252, 0.18);
-      outline-offset: 3px
-    }
-
     a.link:hover {
       transform: translateY(-4px);
       box-shadow: 0 8px 28px rgba(0, 0, 0, 0.6)
@@ -128,7 +123,6 @@
       margin-top: 2px
     }
 
-    /* icon styles */
     .icon {
       width: 36px;
       height: 36px;
@@ -137,6 +131,43 @@
       justify-content: center;
       border-radius: 9px;
       background: rgba(255, 255, 255, 0.03)
+    }
+
+    .papers {
+      margin-top: 42px;
+    }
+
+    .papers h2 {
+      font-size: 22px;
+      margin-bottom: 18px;
+      color: var(--accent);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 6px;
+    }
+
+    .paper {
+      margin-bottom: 18px;
+      background: var(--glass);
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .paper-title {
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .paper-links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 12px;
+      font-size: 14px;
+    }
+
+    .paper-links a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -165,7 +196,6 @@
       }
 
       a.link {
-        min-width: unset;
         width: 100%
       }
     }
@@ -183,13 +213,9 @@
     </header>
 
     <section class="links" aria-label="Quick links">
-      <!-- Github -->
-      <a class="link" href="https://github.com/jgd1589" target="_blank" rel="noopener noreferrer"
-        aria-label="Jonathan's Github">
+      <a class="link" href="https://github.com/jgd1589" target="_blank" rel="noopener noreferrer">
         <span class="icon" aria-hidden="true">
-          <!-- GitHub mark (SVG) -->
-          <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M8 .198a8 8 0 00-2.534 15.59c.4.074.546-.174.546-.386 0-.19-.007-.693-.01-1.36-2.225.483-2.695-1.074-2.695-1.074-.364-.924-.89-1.171-.89-1.171-.727-.497.055-.487.055-.487.803.057 1.226.825 1.226.825.714 1.223 1.872.87 2.328.665.072-.517.279-.87.508-1.07-1.777-.202-3.644-.888-3.644-3.953 0-.873.312-1.588.823-2.148-.083-.203-.357-1.02.078-2.126 0 0 .672-.215 2.2.82a7.66 7.66 0 012.002-.27c.68.003 1.366.092 2.002.27 1.527-1.035 2.197-.82 2.197-.82.437 1.106.163 1.923.08 2.126.513.56.822 1.275.822 2.148 0 3.073-1.87 3.748-3.651 3.947.287.246.543.732.543 1.477 0 1.066-.01 1.927-.01 2.19 0 .214.144.464.55.385A8 8 0 008 .198z" />
           </svg>
@@ -200,11 +226,10 @@
         </span>
       </a>
 
-      <!-- The Knot Encyclopedia -->
-      <a class="link" href="./The_Knot_Encyclopedia/index.html" target="_blank" rel="noopener noreferrer"
-        aria-label="The Knot Encyclopedia">
+      <a class="link" href="./The_Knot_Encyclopedia/index.html" target="_blank" rel="noopener noreferrer">
         <span class="icon" aria-hidden="true">
-          <img src="./The_Knot_Encyclopedia/android-chrome-512x512.png" alt="The Knot Encyclopedia site logo" width="24" height="24" style="vertical-align: middle;">
+          <img src="./The_Knot_Encyclopedia/android-chrome-512x512.png" alt="The Knot Encyclopedia site logo" width="24"
+            height="24" style="vertical-align: middle;">
         </span>
         <span class="label">
           <span class="title">The Knot Encyclopedia</span>
@@ -212,9 +237,9 @@
         </span>
       </a>
 
-      <!-- arXiv Page -->
-      <a class="link" href="https://arxiv.org/search/advanced?advanced=1&terms-0-operator=AND&terms-0-term=%22Jonathan+Gonzalez+Davila%22&terms-0-field=title&classification-physics_archives=all&classification-include_cross_list=include&date-filter_by=all_dates&date-year=&date-from_date=&date-to_date=&date-date_type=submitted_date&abstracts=show&size=50&order=-announced_date_first" target="_blank" rel="noopener noreferrer"
-        aria-label="arXiv profile">
+      <a class="link"
+        href="https://arxiv.org/search/advanced?advanced=1&terms-0-operator=AND&terms-0-term=%22Jonathan+Gonzalez+Davila%22&terms-0-field=title&classification-physics_archives=all&classification-include_cross_list=include&date-filter_by=all_dates&abstracts=show&size=50&order=-announced_date_first"
+        target="_blank" rel="noopener noreferrer">
         <span class="icon" aria-hidden="true">
           <img src="https://arxiv.org/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg" alt="arXiv logo"
             width="80" height="20" style="filter: invert(0);" />
@@ -224,11 +249,38 @@
           <span class="subtitle">arXiv search</span>
         </span>
       </a>
-
     </section>
 
-    <footer>
-    </footer>
+    <!-- NEW RESEARCH SECTION -->
+    <section class="papers" aria-label="Research Papers">
+      <h2>Research Papers</h2>
+
+      <div class="paper">
+        <div class="paper-title">1. A Calculus-Based Approach to Sphere Eversion</div>
+        <div class="paper-links">
+          <a href="./papers/sphere_eversion.pdf" target="_blank">📄 PDF</a>
+          <a href="./papers/sphere_eversion.tex" target="_blank">🧩 LaTeX Source</a>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">2. Visualizing the 3-Sphere</div>
+        <div class="paper-links">
+          <a href="./papers/visualizing_3sphere.pdf" target="_blank">📄 PDF</a>
+          <a href="./papers/visualizing_3sphere.tex" target="_blank">🧩 LaTeX Source</a>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">3. Spectral Statistics of Random Matrices and Numerical PDEs</div>
+        <div class="paper-links">
+          <a href="./papers/random_matrices.pdf" target="_blank">📄 PDF</a>
+          <a href="./papers/random_matrices.tex" target="_blank">🧩 LaTeX Source</a>
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
   </main>
 </body>
 

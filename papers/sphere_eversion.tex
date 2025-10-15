@@ -1,0 +1,80 @@
+% sphere_eversion.tex
+\documentclass[12pt]{article}
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\geometry{margin=1in}
+
+\title{\textbf{A Calculus-Based Approach to Sphere Eversion}}
+\author{Jonathan Gonzalez Davila}
+\date{} % no date shown
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Sphere eversion --- the process of turning a sphere inside out through smooth deformations without tearing or creasing --- is classically studied through topology and differential geometry. In this note we outline how fundamental ideas from multivariable calculus, such as the Jacobian determinant, gradient flows, and curvature minimization, illuminate the analytic structure of an eversion. This approach offers a bridge between calculus-based intuition and the differential-topological perspective.
+\end{abstract}
+
+\section{Introduction}
+A \emph{sphere eversion} is a continuous deformation of the two-dimensional sphere \( S^2 \subset \mathbb{R}^3 \) into itself such that the inside and outside are interchanged, while the surface remains smooth and self-intersections are allowed. Stephen Smale first proved in 1958 that such an eversion exists, demonstrating that \( S^2 \) and its mirror image are \emph{regularly homotopic} immersions in \( \mathbb{R}^3 \).
+
+While the standard proofs rely on differential topology, we show that much of the geometric behavior can be expressed using the calculus of smooth maps \( f : S^2 \to \mathbb{R}^3 \) and their Jacobians.
+
+\section{Smooth Maps and the Jacobian}
+Let \( f_t : S^2 \to \mathbb{R}^3 \) denote a smooth one-parameter family of immersions representing the eversion. Locally, each \( f_t \) can be expressed in coordinates as
+\[
+f_t(u,v) = (x(u,v,t),\, y(u,v,t),\, z(u,v,t)).
+\]
+The differential \( Df_t \) is a \( 3 \times 2 \) matrix whose columns are the tangent vectors
+\[
+Df_t = 
+\begin{bmatrix}
+x_u & x_v \\
+y_u & y_v \\
+z_u & z_v
+\end{bmatrix}.
+\]
+The orientation of the surface is determined by the sign of the scalar triple product
+\[
+J(f_t) = \langle f_u \times f_v,\, n_0 \rangle,
+\]
+where \( n_0 \) is the initial outward normal. A full eversion requires that \( J(f_t) \) change sign globally, which can only occur when \( f_t \) passes through singular points where \( f_u \times f_v = 0 \). These correspond to self-intersections of the surface.
+
+\section{Gradient Flows and Energy Minimization}
+To model the motion analytically, one may consider a deformation minimizing a curvature-based energy functional:
+\[
+E[f_t] = \int_{S^2} \left( \kappa_1^2 + \kappa_2^2 \right) \, dA,
+\]
+where \( \kappa_1, \kappa_2 \) are the principal curvatures. The Euler–Lagrange equation associated with \( E \) yields a gradient flow:
+\[
+\frac{\partial f}{\partial t} = - \nabla E[f_t].
+\]
+In practice, this corresponds to evolving the surface toward configurations of lower mean curvature, except at controlled singularities where orientation reversal occurs.
+
+\section{Local Models and Orientation Reversal}
+Near each self-intersection, one can approximate the local map by a polynomial immersion
+\[
+f(u,v,t) = (u,\, v,\, u^2 - v^2 + t),
+\]
+whose Jacobian determinant changes sign as \( t \) passes through zero. This simple model captures the essence of orientation reversal while maintaining differentiability. Calculus thus provides explicit examples of how the sign of the Jacobian encodes topological information.
+
+\section{Discussion and Outlook}
+By expressing sphere eversion through calculus, we gain a computational handle on the process: curvature flow, Jacobian sign transitions, and gradient-based energy minimization describe its analytic skeleton. In future work, one could discretize \( S^2 \) and implement a numerical eversion algorithm minimizing curvature while tracking the Jacobian’s evolution.
+
+This calculus-based framework, though simpler than the full differential-topological treatment, helps bridge undergraduate calculus intuition and the geometric theory underlying Smale’s theorem.
+
+\begin{thebibliography}{9}
+\bibitem{smale1958}
+S. Smale, \textit{A classification of immersions of the two-sphere}, Transactions of the American Mathematical Society, 90(2):281–290, 1958.
+
+\bibitem{max1997}
+B. Max, \textit{Outside In}, Mathematical Intelligencer, 19(2):53–58, 1997.
+
+\bibitem{levine1999}
+H. Levine, \textit{Eversions of the Sphere}, in \emph{Differential Topology and the Theory of Singularities}, AMS, 1999.
+\end{thebibliography}
+
+\end{document}

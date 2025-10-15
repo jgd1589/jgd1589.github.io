@@ -1,0 +1,80 @@
+% visualizing_3sphere.tex
+\documentclass[12pt]{article}
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\geometry{margin=1in}
+
+\title{\textbf{Visualizing the 3-Sphere}}
+\author{Jonathan Gonzalez Davila}
+\date{} % no date shown
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The 3-sphere \( S^3 \) is a fundamental object in geometry and topology, representing the set of points equidistant from the origin in four-dimensional space. Although it cannot be directly visualized in Euclidean 3-space, its structure can be understood through coordinate systems, projections, and analytic parametrizations derived from multivariable calculus. This paper introduces several techniques for visualizing \( S^3 \) and interpreting its curvature and topology through calculus and differential geometry.
+\end{abstract}
+
+\section{Introduction}
+The 3-sphere \( S^3 \) is defined as
+\[
+S^3 = \{ (x, y, z, w) \in \mathbb{R}^4 \mid x^2 + y^2 + z^2 + w^2 = 1 \}.
+\]
+It serves as the natural generalization of the circle \( S^1 \subset \mathbb{R}^2 \) and the ordinary sphere \( S^2 \subset \mathbb{R}^3 \). Despite its four-dimensional embedding, calculus and geometry allow us to understand \( S^3 \) through analytic descriptions and lower-dimensional projections.
+
+\section{Parametrization via Angles}
+A convenient parameterization of \( S^3 \) uses three angular coordinates \((\theta, \phi, \psi)\):
+\[
+\begin{aligned}
+x &= \cos \theta \cos \phi, \\
+y &= \cos \theta \sin \phi, \\
+z &= \sin \theta \cos \psi, \\
+w &= \sin \theta \sin \psi,
+\end{aligned}
+\quad
+\text{where } \theta \in \left[-\tfrac{\pi}{2}, \tfrac{\pi}{2}\right],\,
+\phi, \psi \in [0, 2\pi).
+\]
+Each value of \( \theta \) corresponds to a torus \( S^1 \times S^1 \) embedded in \( S^3 \). Thus \( S^3 \) can be visualized as a continuous family of linked tori shrinking to circles at the poles. This geometric decomposition is known as the \emph{Hopf fibration}.
+
+\section{Stereographic Projection}
+To render \( S^3 \) in three dimensions, one uses stereographic projection from the north pole \( (0,0,0,1) \) onto the hyperplane \( w=0 \):
+\[
+\pi(x, y, z, w) = \left(\frac{x}{1-w}, \frac{y}{1-w}, \frac{z}{1-w}\right).
+\]
+This mapping preserves smoothness and conformality, producing a 3D representation of \( S^3 \) in \( \mathbb{R}^3 \). Curves and tori under this projection appear as nested, linked shapes, visually expressing the Hopf structure.
+
+\section{Curvature and Differential Geometry}
+The induced metric on \( S^3 \) from \( \mathbb{R}^4 \) is
+\[
+ds^2 = d\theta^2 + \cos^2 \theta \, d\phi^2 + \sin^2 \theta \, d\psi^2,
+\]
+with constant sectional curvature \( +1 \). The Christoffel symbols and curvature tensors can be computed directly from this metric using multivariable calculus, confirming that \( S^3 \) is a Riemannian manifold of constant positive curvature.
+
+\section{Computational Visualization}
+In computer visualization, we approximate \( S^3 \) by sampling points in \(\mathbb{R}^4\) satisfying \(x^2 + y^2 + z^2 + w^2 = 1\), then projecting to \(\mathbb{R}^3\) via stereographic projection. The mapping can be implemented as:
+\[
+(x', y', z') = \frac{(x, y, z)}{1 - w}.
+\]
+Color or transparency can encode the hidden \(w\)-dimension. This approach allows rendering linked tori and geodesics of \(S^3\) in standard 3D visualization software.
+
+\section{Conclusion}
+The 3-sphere embodies a profound synthesis of algebra, calculus, and geometry. Through explicit parametrizations and projections, one can visualize its structure and curvature, revealing the hidden beauty of higher-dimensional manifolds in familiar 3D space. Calculus provides both the local analytic tools and the global invariants that make this visualization mathematically rigorous.
+
+\begin{thebibliography}{9}
+\bibitem{hopf1931}
+H. Hopf, \textit{Über die Abbildungen der dreidimensionalen Sphäre auf die Kugelfläche}, Math. Ann., 104(1):637–665, 1931.
+
+\bibitem{thurston1997}
+W. P. Thurston, \textit{Three-Dimensional Geometry and Topology}, Vol. 1, Princeton University Press, 1997.
+
+\bibitem{lee2018}
+J. M. Lee, \textit{Introduction to Riemannian Manifolds}, 2nd ed., Springer, 2018.
+\end{thebibliography}
+
+\end{document}
+\bibitem{milnor1965}
+J. Milnor, \textit{Topology from the Differentiable Viewpoint}, University of Virginia Press, 1965.
